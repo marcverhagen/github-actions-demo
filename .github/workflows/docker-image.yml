@@ -1,7 +1,9 @@
 name: Docker Image CI
 run-name: Building hello image
 
-on: [push]
+on: 
+  push:
+    branches: [ develop ]
 
 jobs:
 
