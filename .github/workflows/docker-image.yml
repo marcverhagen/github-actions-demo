@@ -10,7 +10,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Move to code directory
-      run: cd code
     - name: Build the Docker image
+      working-directory: code
       run: docker build . --file Dockerfile --tag hello:$(date +%s)
