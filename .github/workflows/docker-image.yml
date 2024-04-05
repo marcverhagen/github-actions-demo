@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image $(date +%s)
+    - name: Build the Docker image ${{ (date +%s) }}
       working-directory: code
       run: docker build . --file Dockerfile --tag hello:$(date +%s)
     - name: Running a Docker container
