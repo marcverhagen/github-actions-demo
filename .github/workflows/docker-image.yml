@@ -14,3 +14,5 @@ jobs:
     - name: Build the Docker image
       working-directory: code
       run: docker build . --file Dockerfile --tag hello:$(date +%s)
+    - name: Running a Docker container
+      run: docker run hello
